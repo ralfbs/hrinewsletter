@@ -1,0 +1,18 @@
+plugin.tx_hrinewsletter {
+	view {
+		# cat=plugin.tx_hrinewsletter/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:hrinewsletter/Resources/Private/Templates/
+		# cat=plugin.tx_hrinewsletter/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:hrinewsletter/Resources/Private/Partials/
+		# cat=plugin.tx_hrinewsletter/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:hrinewsletter/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_hrinewsletter//a; type=string; label=Default storage PID
+		storagePid = 
+	}
+	settings {
+		# cat=plugin.tx_hrinewsletter/path/a; type=string; label=Newsletter Subscribe URL: Where the subscribe form is send to
+		subscribeUrl = http://hr-newsletter/subscribe		
+	}
+}

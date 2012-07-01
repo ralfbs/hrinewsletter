@@ -7,6 +7,10 @@
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="tx_hrinewsletter_domain_model_member">Member</label>
+			<label index="tx_hrinewsletter_domain_model_member.subscribe_h1">Subscribe</label>
+			<label index="tx_hrinewsletter_domain_model_member.subscribe_description">...and register for a free newsletter</label>
+			<label index="tx_hrinewsletter_domain_model_member.subscribe_email">Your Email Address</label>
+			<label index="tx_hrinewsletter_domain_model_member.subscribe_send">submit</label>			
 			<label index="tx_hrinewsletter_domain_model_maillog">MailLog</label>
 			<label index="tx_hrinewsletter_domain_model_maillog.member">member</label>
 		</languageKey>

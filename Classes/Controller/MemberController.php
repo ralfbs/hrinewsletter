@@ -50,5 +50,14 @@ class Tx_Hrinewsletter_Controller_MemberController extends Tx_Extbase_MVC_Contro
 		$this->memberRepository = $memberRepository;
 	}
 
+	/**
+	 * action subscribe
+	 *
+	 * @return void
+	 */
+	public function subscribeAction() {
+
+	}
+
 }
 ?>

@@ -1,0 +1,40 @@
+plugin.tx_hrinewsletter {
+	view {
+		templateRootPath = {$plugin.tx_hrinewsletter.view.templateRootPath}
+		partialRootPath = {$plugin.tx_hrinewsletter.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_hrinewsletter.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_hrinewsletter.persistence.storagePid}
+	}
+	settings {
+		subscribeUrl = {$plugin.tx_hrinewsletter.settings.subscribeUrl}
+	}
+}
+
+plugin.tx_hrinewsletter._CSS_DEFAULT_STYLE (
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-hrinewsletter .description {
+		color: #808080;
+	}
+	.tx-hrinewsletter table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-hrinewsletter table th {
+		font-weight:bold;
+	}
+
+	.tx-hrinewsletter table td {
+		vertical-align:top;
+	}
+	.tx-hrinewsletter-subscribeform input[type=text] {	
+	}
+	.tx-hrinewsletter-subscribeform input[type=submit] {	
+	}	
+)
