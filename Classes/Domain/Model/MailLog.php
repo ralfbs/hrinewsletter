@@ -34,11 +34,25 @@
 class Tx_Hrinewsletter_Domain_Model_MailLog extends Tx_Extbase_DomainObject_AbstractEntity {
 
 	/**
+	 * m
+	 *
+	 * @var string
+	 */
+	protected $m;
+
+	/**
 	 * member
 	 *
 	 * @var Tx_Hrinewsletter_Domain_Model_Member
 	 */
 	protected $member;
+
+	/**
+	 * issue
+	 *
+	 * @var Tx_Hrinewsletter_Domain_Model_Issue
+	 */
+	protected $issue;
 
 	/**
 	 * Returns the member
@@ -57,6 +71,44 @@ class Tx_Hrinewsletter_Domain_Model_MailLog extends Tx_Extbase_DomainObject_Abst
 	 */
 	public function setMember(Tx_Hrinewsletter_Domain_Model_Member $member) {
 		$this->member = $member;
+	}
+
+	/**
+	 * Returns the issue
+	 *
+	 * @return Tx_Hrinewsletter_Domain_Model_Issue $issue
+	 */
+	public function getIssue() {
+		return $this->issue;
+	}
+
+	/**
+	 * Sets the issue
+	 *
+	 * @param Tx_Hrinewsletter_Domain_Model_Issue $issue
+	 * @return void
+	 */
+	public function setIssue(Tx_Hrinewsletter_Domain_Model_Issue $issue) {
+		$this->issue = $issue;
+	}
+
+	/**
+	 * Returns the m
+	 *
+	 * @return string $m
+	 */
+	public function getM() {
+		return $this->m;
+	}
+
+	/**
+	 * Sets the m
+	 *
+	 * @param string $m
+	 * @return void
+	 */
+	public function setM($m) {
+		$this->m = $m;
 	}
 
 }

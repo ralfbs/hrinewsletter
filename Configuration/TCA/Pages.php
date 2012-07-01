@@ -3,13 +3,13 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$TCA['tx_hrinewsletter_domain_model_maillog'] = array(
-	'ctrl' => $TCA['tx_hrinewsletter_domain_model_maillog']['ctrl'],
+$TCA['tx_hrinewsletter_domain_model_pages'] = array(
+	'ctrl' => $TCA['tx_hrinewsletter_domain_model_pages']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, m, member, issue',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, m, member, issue,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -37,8 +37,8 @@ $TCA['tx_hrinewsletter_domain_model_maillog'] = array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_hrinewsletter_domain_model_maillog',
-				'foreign_table_where' => 'AND tx_hrinewsletter_domain_model_maillog.pid=###CURRENT_PID### AND tx_hrinewsletter_domain_model_maillog.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_hrinewsletter_domain_model_pages',
+				'foreign_table_where' => 'AND tx_hrinewsletter_domain_model_pages.pid=###CURRENT_PID### AND tx_hrinewsletter_domain_model_pages.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(
@@ -93,33 +93,9 @@ $TCA['tx_hrinewsletter_domain_model_maillog'] = array(
 				),
 			),
 		),
-		'm' => array(
-			'exclude' => 0,
-			'label' => 'LLL:EXT:hrinewsletter/Resources/Private/Language/locallang_db.xml:tx_hrinewsletter_domain_model_maillog.m',
-			'config' => array(
-				'type' => 'input',
-				'size' => 30,
-				'eval' => 'trim'
-			),
-		),
-		'member' => array(
-			'exclude' => 0,
-			'label' => 'LLL:EXT:hrinewsletter/Resources/Private/Language/locallang_db.xml:tx_hrinewsletter_domain_model_maillog.member',
-			'config' => array(
-				'type' => 'select',
-				'foreign_table' => 'fe_users',
-				'minitems' => 0,
-				'maxitems' => 1,
-			),
-		),
 		'issue' => array(
-			'exclude' => 0,
-			'label' => 'LLL:EXT:hrinewsletter/Resources/Private/Language/locallang_db.xml:tx_hrinewsletter_domain_model_maillog.issue',
 			'config' => array(
-				'type' => 'select',
-				'foreign_table' => 'tx_hrinewsletter_domain_model_issue',
-				'minitems' => 0,
-				'maxitems' => 1,
+				'type' => 'passthrough',
 			),
 		),
 	),

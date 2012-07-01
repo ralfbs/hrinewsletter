@@ -11,7 +11,18 @@
 			<label index="fe_users.tx_extbase_type.Tx_Hrinewsletter_Member">hr-interactive Newsletter Member</label>
 			
 			<label index="tx_hrinewsletter_domain_model_maillog">Mail Log</label>
+			<label index="tx_hrinewsletter_domain_model_maillog.m">M</label>
 			<label index="tx_hrinewsletter_domain_model_maillog.member">Member</label>
+			<label index="tx_hrinewsletter_domain_model_maillog.issue">Issue</label>
+
+			<label index="tx_hrinewsletter_domain_model_issue">Issue</label>
+			<label index="tx_hrinewsletter_domain_model_issue.issue">Issue</label>
+			<label index="tx_hrinewsletter_domain_model_issue.intro">Intro</label>
+			<label index="tx_hrinewsletter_domain_model_issue.id">Id</label>
+			<label index="tx_hrinewsletter_domain_model_issue.lang">Lang</label>
+			<label index="tx_hrinewsletter_domain_model_issue.pages">Pages</label>
+
+			<label index="tx_hrinewsletter_domain_model_pages">Pages</label>
 
 		</languageKey>
 	</data>

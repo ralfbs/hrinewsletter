@@ -18,4 +18,4 @@ plugin.tx_hrinewsletter {
 		# cat=plugin.tx_hrinewsletter/path/a; type=string; label=Newsletter Subscribe URL: Where the subscribe form is send to
 		subscribeUrl = http://hr-newsletter/subscribe		
 	}
-}	
+}

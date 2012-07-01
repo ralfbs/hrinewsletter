@@ -25,7 +25,7 @@
  ***************************************************************/
 
 /**
- * Test case for class Tx_Hrinewsletter_Domain_Model_MailLog.
+ * Test case for class Tx_Hrinewsletter_Domain_Model_Pages.
  *
  * @version $Id$
  * @copyright Copyright belongs to the respective authors
@@ -36,81 +36,25 @@
  *
  * @author Ralf Schneider <ralf@hr-interactive.de>
  */
-class Tx_Hrinewsletter_Domain_Model_MailLogTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
+class Tx_Hrinewsletter_Domain_Model_PagesTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
-	 * @var Tx_Hrinewsletter_Domain_Model_MailLog
+	 * @var Tx_Hrinewsletter_Domain_Model_Pages
 	 */
 	protected $fixture;
 
 	public function setUp() {
-		$this->fixture = new Tx_Hrinewsletter_Domain_Model_MailLog();
+		$this->fixture = new Tx_Hrinewsletter_Domain_Model_Pages();
 	}
 
 	public function tearDown() {
 		unset($this->fixture);
 	}
-
-	/**
-	 * @test
-	 */
-	public function getMReturnsInitialValueForString() { }
-
-	/**
-	 * @test
-	 */
-	public function setMForStringSetsM() { 
-		$this->fixture->setM('Conceived at T3CON10');
-
-		$this->assertSame(
-			'Conceived at T3CON10',
-			$this->fixture->getM()
-		);
-	}
 	
 	/**
 	 * @test
 	 */
-	public function getMemberReturnsInitialValueForTx_Hrinewsletter_Domain_Model_Member() { 
-		$this->assertEquals(
-			NULL,
-			$this->fixture->getMember()
-		);
-	}
-
-	/**
-	 * @test
-	 */
-	public function setMemberForTx_Hrinewsletter_Domain_Model_MemberSetsMember() { 
-		$dummyObject = new Tx_Hrinewsletter_Domain_Model_Member();
-		$this->fixture->setMember($dummyObject);
-
-		$this->assertSame(
-			$dummyObject,
-			$this->fixture->getMember()
-		);
-	}
-	
-	/**
-	 * @test
-	 */
-	public function getIssueReturnsInitialValueForTx_Hrinewsletter_Domain_Model_Issue() { 
-		$this->assertEquals(
-			NULL,
-			$this->fixture->getIssue()
-		);
-	}
-
-	/**
-	 * @test
-	 */
-	public function setIssueForTx_Hrinewsletter_Domain_Model_IssueSetsIssue() { 
-		$dummyObject = new Tx_Hrinewsletter_Domain_Model_Issue();
-		$this->fixture->setIssue($dummyObject);
-
-		$this->assertSame(
-			$dummyObject,
-			$this->fixture->getIssue()
-		);
+	public function dummyTestToNotLeaveThisFileEmpty() {
+		$this->markTestIncomplete();
 	}
 	
 }

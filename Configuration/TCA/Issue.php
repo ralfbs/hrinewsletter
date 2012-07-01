@@ -3,13 +3,13 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$TCA['tx_hrinewsletter_domain_model_maillog'] = array(
-	'ctrl' => $TCA['tx_hrinewsletter_domain_model_maillog']['ctrl'],
+$TCA['tx_hrinewsletter_domain_model_issue'] = array(
+	'ctrl' => $TCA['tx_hrinewsletter_domain_model_issue']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, m, member, issue',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, issue, intro, id, lang, pages',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, m, member, issue,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, issue, intro, id, lang, pages,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -37,8 +37,8 @@ $TCA['tx_hrinewsletter_domain_model_maillog'] = array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_hrinewsletter_domain_model_maillog',
-				'foreign_table_where' => 'AND tx_hrinewsletter_domain_model_maillog.pid=###CURRENT_PID### AND tx_hrinewsletter_domain_model_maillog.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_hrinewsletter_domain_model_issue',
+				'foreign_table_where' => 'AND tx_hrinewsletter_domain_model_issue.pid=###CURRENT_PID### AND tx_hrinewsletter_domain_model_issue.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(
@@ -93,33 +93,58 @@ $TCA['tx_hrinewsletter_domain_model_maillog'] = array(
 				),
 			),
 		),
-		'm' => array(
+		'issue' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:hrinewsletter/Resources/Private/Language/locallang_db.xml:tx_hrinewsletter_domain_model_maillog.m',
+			'label' => 'LLL:EXT:hrinewsletter/Resources/Private/Language/locallang_db.xml:tx_hrinewsletter_domain_model_issue.issue',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim'
 			),
 		),
-		'member' => array(
+		'intro' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:hrinewsletter/Resources/Private/Language/locallang_db.xml:tx_hrinewsletter_domain_model_maillog.member',
+			'label' => 'LLL:EXT:hrinewsletter/Resources/Private/Language/locallang_db.xml:tx_hrinewsletter_domain_model_issue.intro',
 			'config' => array(
-				'type' => 'select',
-				'foreign_table' => 'fe_users',
-				'minitems' => 0,
-				'maxitems' => 1,
+				'type' => 'text',
+				'cols' => 40,
+				'rows' => 15,
+				'eval' => 'trim'
 			),
 		),
-		'issue' => array(
+		'id' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:hrinewsletter/Resources/Private/Language/locallang_db.xml:tx_hrinewsletter_domain_model_maillog.issue',
+			'label' => 'LLL:EXT:hrinewsletter/Resources/Private/Language/locallang_db.xml:tx_hrinewsletter_domain_model_issue.id',
 			'config' => array(
-				'type' => 'select',
-				'foreign_table' => 'tx_hrinewsletter_domain_model_issue',
-				'minitems' => 0,
-				'maxitems' => 1,
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'lang' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:hrinewsletter/Resources/Private/Language/locallang_db.xml:tx_hrinewsletter_domain_model_issue.lang',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'pages' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:hrinewsletter/Resources/Private/Language/locallang_db.xml:tx_hrinewsletter_domain_model_issue.pages',
+			'config' => array(
+				'type' => 'inline',
+				'foreign_table' => 'tx_hrinewsletter_domain_model_pages',
+				'foreign_field' => 'issue',
+				'maxitems'      => 9999,
+				'appearance' => array(
+					'collapse' => 0,
+					'levelLinksPosition' => 'top',
+					'showSynchronizationLink' => 1,
+					'showPossibleLocalizationRecords' => 1,
+					'showAllLocalizationLink' => 1
+				),
 			),
 		),
 	),

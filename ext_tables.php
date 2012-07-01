@@ -57,7 +57,7 @@ $TCA['fe_users']['types']['Tx_Hrinewsletter_Member']['showitem'] .= '';
 			$TCA['tx_hrinewsletter_domain_model_maillog'] = array(
 				'ctrl' => array(
 					'title'	=> 'LLL:EXT:hrinewsletter/Resources/Private/Language/locallang_db.xml:tx_hrinewsletter_domain_model_maillog',
-					'label' => 'member',
+					'label' => 'm',
 					'tstamp' => 'tstamp',
 					'crdate' => 'crdate',
 					'cruser_id' => 'cruser_id',
@@ -76,6 +76,60 @@ $TCA['fe_users']['types']['Tx_Hrinewsletter_Member']['showitem'] .= '';
 					),
 					'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/MailLog.php',
 					'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_hrinewsletter_domain_model_maillog.gif'
+				),
+			);
+
+			t3lib_extMgm::addLLrefForTCAdescr('tx_hrinewsletter_domain_model_issue', 'EXT:hrinewsletter/Resources/Private/Language/locallang_csh_tx_hrinewsletter_domain_model_issue.xml');
+			t3lib_extMgm::allowTableOnStandardPages('tx_hrinewsletter_domain_model_issue');
+			$TCA['tx_hrinewsletter_domain_model_issue'] = array(
+				'ctrl' => array(
+					'title'	=> 'LLL:EXT:hrinewsletter/Resources/Private/Language/locallang_db.xml:tx_hrinewsletter_domain_model_issue',
+					'label' => 'issue',
+					'tstamp' => 'tstamp',
+					'crdate' => 'crdate',
+					'cruser_id' => 'cruser_id',
+					'dividers2tabs' => TRUE,
+					'versioningWS' => 2,
+					'versioning_followPages' => TRUE,
+					'origUid' => 't3_origuid',
+					'languageField' => 'sys_language_uid',
+					'transOrigPointerField' => 'l10n_parent',
+					'transOrigDiffSourceField' => 'l10n_diffsource',
+					'delete' => 'deleted',
+					'enablecolumns' => array(
+						'disabled' => 'hidden',
+						'starttime' => 'starttime',
+						'endtime' => 'endtime',
+					),
+					'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/Issue.php',
+					'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_hrinewsletter_domain_model_issue.gif'
+				),
+			);
+
+			t3lib_extMgm::addLLrefForTCAdescr('tx_hrinewsletter_domain_model_pages', 'EXT:hrinewsletter/Resources/Private/Language/locallang_csh_tx_hrinewsletter_domain_model_pages.xml');
+			t3lib_extMgm::allowTableOnStandardPages('tx_hrinewsletter_domain_model_pages');
+			$TCA['tx_hrinewsletter_domain_model_pages'] = array(
+				'ctrl' => array(
+					'title'	=> 'LLL:EXT:hrinewsletter/Resources/Private/Language/locallang_db.xml:tx_hrinewsletter_domain_model_pages',
+					'label' => 'uid',
+					'tstamp' => 'tstamp',
+					'crdate' => 'crdate',
+					'cruser_id' => 'cruser_id',
+					'dividers2tabs' => TRUE,
+					'versioningWS' => 2,
+					'versioning_followPages' => TRUE,
+					'origUid' => 't3_origuid',
+					'languageField' => 'sys_language_uid',
+					'transOrigPointerField' => 'l10n_parent',
+					'transOrigDiffSourceField' => 'l10n_diffsource',
+					'delete' => 'deleted',
+					'enablecolumns' => array(
+						'disabled' => 'hidden',
+						'starttime' => 'starttime',
+						'endtime' => 'endtime',
+					),
+					'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/Pages.php',
+					'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_hrinewsletter_domain_model_pages.gif'
 				),
 			);
 
