@@ -9,6 +9,10 @@ Tx_Extbase_Utility_Extension::registerPlugin(
 	'Subscription Form'
 );
 
+$pluginSignature = str_replace('_','',$_EXTKEY) . '_' . subscriptionform;
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
+t3lib_extMgm::addPiFlexFormValue($pluginSignature, 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/flexform_' .subscriptionform. '.xml');
+
 t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'hr-interactive Newsletter');
 
 t3lib_div::loadTCA('fe_users');
@@ -75,4 +79,5 @@ $TCA['fe_users']['types']['Tx_Hrinewsletter_Member']['showitem'] .= '';
 				),
 			);
 
+## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
 ?>

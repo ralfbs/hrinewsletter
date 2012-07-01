@@ -11,8 +11,11 @@ plugin.tx_hrinewsletter {
 		# cat=plugin.tx_hrinewsletter//a; type=string; label=Default storage PID
 		storagePid = 
 	}
+}
+## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
+plugin.tx_hrinewsletter {
 	settings {
 		# cat=plugin.tx_hrinewsletter/path/a; type=string; label=Newsletter Subscribe URL: Where the subscribe form is send to
 		subscribeUrl = http://hr-newsletter/subscribe		
 	}
-}
+}	

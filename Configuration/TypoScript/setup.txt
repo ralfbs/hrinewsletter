@@ -7,9 +7,6 @@ plugin.tx_hrinewsletter {
 	persistence {
 		storagePid = {$plugin.tx_hrinewsletter.persistence.storagePid}
 	}
-	settings {
-		subscribeUrl = {$plugin.tx_hrinewsletter.settings.subscribeUrl}
-	}
 }
 
 plugin.tx_hrinewsletter._CSS_DEFAULT_STYLE (
@@ -18,9 +15,6 @@ plugin.tx_hrinewsletter._CSS_DEFAULT_STYLE (
 		border: 1px #FF0000 solid;
 	}
 
-	.tx-hrinewsletter .description {
-		color: #808080;
-	}
 	.tx-hrinewsletter table {
 		border-collapse:separate;
 		border-spacing:10px;
@@ -33,8 +27,10 @@ plugin.tx_hrinewsletter._CSS_DEFAULT_STYLE (
 	.tx-hrinewsletter table td {
 		vertical-align:top;
 	}
-	.tx-hrinewsletter-subscribeform input[type=text] {	
-	}
-	.tx-hrinewsletter-subscribeform input[type=submit] {	
-	}	
 )
+## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
+plugin.tx_hrinewsletter {
+	settings {
+		subscribeUrl = {$plugin.tx_hrinewsletter.settings.subscribeUrl
+	}
+}
