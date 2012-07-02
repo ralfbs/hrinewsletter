@@ -1,0 +1,5 @@
+# cat=hrinewsletter/basic; type=string; label=Newsletter Sync URL:Endpoint where synchronisation in Newsletter goes to. 
+newsletterSyncUrl = 
+
+# cat=hrinewsletter/basic; type=string; label=Password:For syncing with newsletter system
+newsletterSyncPassword = 

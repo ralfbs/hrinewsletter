@@ -16,6 +16,10 @@ plugin.tx_hrinewsletter {
 plugin.tx_hrinewsletter {
 	settings {
 		# cat=plugin.tx_hrinewsletter/path/a; type=string; label=Newsletter Subscribe URL: Where the subscribe form is send to
-		subscribeUrl = http://hr-newsletter/subscribe		
+		subscribeUrl = http://newsletter.hr-interactive.de/subscribe		
+		# cat=plugin.tx_hrinewsletter/dims/b; type=string; label=Newsletter lang: client in the newsletter system - overwrite for each translation
+		newsletterLang = de		
+		# cat=plugin.tx_hrinewsletter/basic/a; type=boolean; label=Debug
+		debug = 0					
 	}
 }

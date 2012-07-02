@@ -31,6 +31,8 @@ plugin.tx_hrinewsletter._CSS_DEFAULT_STYLE (
 ## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
 plugin.tx_hrinewsletter {
 	settings {
-		subscribeUrl = {$plugin.tx_hrinewsletter.settings.subscribeUrl
+		subscribeUrl = {$plugin.tx_hrinewsletter.settings.subscribeUrl}
+		newsletterLang = {$plugin.tx_hrinewsletter.settings.newsletterLang}
+		debug = {$plugin.tx_hrinewsletter.settings.debug}
 	}
 }
